@@ -1,0 +1,38 @@
+# Secrets / API keys — NUNCA commitar
+.env
+.env.local
+.env.*.local
+**/.env
+*.key
+*.pem
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.uv/
+.venv/
+venv/
+env/
+
+# uv cache
+.uv-cache/
+
+# Saídas antigas (experimentos descartados)
+saida/_antigas/
+**/saida/_antigas/
+
+# Logs
+*.log

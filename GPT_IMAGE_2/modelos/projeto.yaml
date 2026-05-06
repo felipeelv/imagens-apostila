@@ -1,0 +1,48 @@
+projeto:
+  titulo: "Nome do projeto"
+  tipo: "imagem" # hq | infografico | poster | card | carrossel | capa
+  idioma: "pt-BR"
+  formato: "vertical 9:16"
+  provider_padrao: "openai"
+
+modelo:
+  provider: "openai"
+  id: "gpt-image-2"
+  perfil_de_prompt: |
+    Instrucoes literais, diretas, sem contradicoes e com textos permitidos bem delimitados.
+
+parametros_api:
+  tamanho: "1024x1536"
+
+saida:
+  pasta: "saida"
+  gerar_pdf: false
+  arquivo_pdf: "saida/final.pdf"
+
+estilo_global: |
+  Descreva o estilo visual geral.
+  Mantenha somente instrucoes que fazem sentido para gpt-image-2.
+
+conteudo: |
+  Descreva o conteudo geral que deve ser transformado em imagem.
+
+personagens: |
+  Opcional. Use quando precisar manter pessoas/personagens consistentes.
+
+textos_obrigatorios:
+  - "TEXTO CURTO 1"
+  - "TEXTO CURTO 2"
+
+regras:
+  - "Ser literal e direto; nao interpretar alem do prompt."
+  - "Evitar excesso de contexto e notas tecnicas."
+  - "Usar somente os textos obrigatorios definidos."
+  - "Nao criar texto extra."
+  - "Usar texto grande e legivel."
+  - "Manter margens seguras."
+
+imagens:
+  - numero: 1
+    tipo: "imagem"
+    prompt: "prompt.txt"
+    saida: "saida/imagem_1.png"
