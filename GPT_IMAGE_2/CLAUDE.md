@@ -146,8 +146,13 @@ Personagens bíblicos (Ester, Daniel, etc.) **devem usar a paleta da unidade** �
 - ✅ 1ª série EM (`saida/Apostila/Identidade-1EM/`) — 6 páginas
 - ✅ 2ª série EM (`saida/Apostila/Identidade-2EM/`) — 6 páginas
 
-**Unidade 04 — INTEGRIDADE**:
+**Unidade 04 — INTEGRIDADE** (em produção · 2026-05-09):
 - ✅ 6º ano EF2 (`saida/Apostila/Integridade-6ano/`) — 6 páginas
+- ✅ 7º ano EF2 (`saida/Apostila/Integridade-7ano/`) — 6 páginas (paleta Slate+Magenta+Mostarda)
+- ✅ 2º ano EF1 (`saida/Apostila/Integridade-2ano/`) — 8 páginas (paleta Cuidado & Coragem)
+- ✅ 3º ano EF1 (`saida/Apostila/Integridade-3ano/`) — 8 páginas (3D Pixar/Encanto)
+- ✅ 4º ano EF1 (`saida/Apostila/Integridade-4ano/`) — 6 páginas (3D cartunizado Disney Channel)
+- ✅ 5º ano EF1 (`saida/Apostila/Integridade-5ano/`) — 6 páginas (Marvel cel-shaded comic)
 - ⏳ 1ª série EM — pendente
 - ⏳ 2ª série EM — pendente
 
@@ -155,19 +160,61 @@ Unidades futuras esperadas: outras dimensões de "Vida e Propósito" (caráter, 
 
 ---
 
-## Convenções deste projeto
+## Convenções deste projeto (workflow atualizado em 2026-05-09)
 
 - Sempre responder em **português brasileiro**.
-- Sempre confirmar paleta/tipografia/estilo antes de uma série nova.
-- Para cada nova unidade:
-  1. Receber o conteúdo bruto da unidade (markdown estruturado).
-  2. Dividir em 6 páginas (abertura + 4 seções + personagem/aplicação).
-  3. Definir paleta (mantém a da série já estabelecida) + frase de impacto por página.
-  4. Escrever 6 prompts em inglês detalhado seguindo o template do diretório.
-  5. Disparar 5 em paralelo + 1 sequencial (rate limit).
-  6. Abrir cada PNG no Read e validar contra a referência.
-
+- **O usuário sempre envia o conteúdo bruto** da unidade. Nunca derivar conteúdo sozinho.
+- **Total de páginas da unidade é sempre PAR** (6, 8, 10) incluindo a capa. Antes de produzir, propor a divisão e aguardar aprovação.
+- **Página 1 é sempre a CAPA** com 3 elementos: título + texto introdutório + box "Para Conversar". Sem indicação textual de "Unidade XX".
+- **Texto VERBATIM do conteúdo enviado** — não cortar, não parafrasear, não simplificar bullets. Reduzir font size se preciso para caber.
+- **Produção uma página por vez** com aprovação explícita antes de avançar (substitui o lote 5+1 antigo). Iterar com `-v2`, `-v3` na mesma página enquanto não estiver aprovada.
+- **Estabelecer padrão de série na primeira unidade**: paleta + estilo + identidade visual aprovados na primeira capa valem para todas as outras unidades dessa série/ano.
+- **Continuidade visual com a apostila como um todo** — DNA editorial-infográfico mantido, ajustando densidade/estilo/lúdico por idade.
 - Versões iterativas: salvar como `pagina-XX-tema-v2.png`, `v3.png`. Não sobrescrever a aprovada.
+
+## Estilo visual por série/ano (estabelecido na U4 2026-05-09)
+
+Cada série/ano tem **paleta distinta** + **estilo de hero distinto** que evolui com a idade. Resumo:
+
+| Série/Ano | Paleta | Estilo do hero | Tema visual |
+|---|---|---|---|
+| 2º ano EF1 (~7 anos) | sky-blue + warm-orange + leaf-green ("Cuidado & Coragem") | Foto-realista premium friendly | Pictogramas de segurança |
+| 3º ano EF1 (~8 anos) | teal turquesa + coral salmão + sunny gold ("Integridade Investigativa") | 3D Pixar/Encanto realista | Pictogramas de ciência (lupa, microscópio) |
+| 4º ano EF1 (~9 anos) | deep plum + mustard + sage ("Caráter Maduro") | 3D cartunizado Disney Channel/Bluey | Pictogramas mistos ciência+construção (tijolo, plumb-line) |
+| 5º ano EF1 (~10 anos) | deep slate blue + coral red + mint green ("Vida Inteira") | **Marvel cel-shaded comic** (Spider-Verse / What If...?) | Pictogramas do corpo humano (coração, pulmão, cérebro) |
+| 6º ano EF2 (~11-12 anos) | Cosmos (azul cósmico + amarelo + coral) | Foto-realista premium | Ícones diversos |
+| 7º ano EF2 (~12-13 anos) | Slate + Magenta + Mostarda | Foto-realista + composição em camadas | Tech-editorial denso |
+| 1ª série EM (~15 anos) | Verde-petróleo + Terracota | Foto-realista editorial | Editorial-pop sofisticado |
+| 2ª série EM (~16 anos) | Navy + Roxo | Foto-realista denso | Editorial-pop conceitual |
+
+**Personagens bíblicos** (Daniel, Davi, Ester) sempre em **vestes nas cores da unidade da série** — nunca bordô/dourado clássicos.
+
+## Componentes-sticker (design system, estabelecido na U4 2ano EF1)
+
+Boxes recorrentes são **componentes-sticker** com identidade fixa, repetidos idênticos em todas as páginas/unidades como peças coladas reconhecíveis (drop shadow + tilt + washi-tape ou decoração específica). Lista:
+
+1. **VOCÊ SABIA?** — sky-pastel base + sky-blue pill + ícone "?" em circle + washi-tape
+2. **PENSE UM POUCO** — mint-pastel + leaf-green pill + nuvem de pensamento + 3 bolinhas escalonadas
+3. **PARE E PENSE** — gold-pastel + sunny-gold pill + ícone stop-hand + washi-tape
+4. **PARA CONVERSAR** — peach-pastel full-width + warm-orange pill + balão de fala + ilustração lateral fixa de 2 crianças no banco
+5. **DA HISTÓRIA PRA MINHA VIDA** — peach-pastel full-width + handshake icon + lista numerada em circles (P-personagem-fim)
+6. **NO FINAL DAS CONTAS** — sky-pastel full-width + banner-style header com notches + estrela + texto-amarra final (P-fechamento)
+
+Paleta dos stickers se adapta à paleta da série, mas estrutura/forma/ícone permanecem.
+
+No 5º ano EF1 (Marvel cel-shaded), os stickers ganharam **bold black ink outline ~3px + spike de speech-bubble + lightning-bolt mark + halftone benday dots** mantendo a identidade.
+
+## Regras invioláveis (estabelecidas em 2026-05-09)
+
+- ❌ **NO header strip** com dot+linha no topo-esquerda (rejeitado a partir do 4º ano EF1)
+- ❌ **NO frame tracejado com pictogramas** no topo-direita (mesmo motivo)
+- ❌ **NO numeração de tópicos/subtópicos** ("1.", "1.1") visível nas páginas — só pra organização interna do conteúdo
+- ❌ **NO uniforme escolar** (polo, gola colorida, logo) nos personagens — usar roupas comuns (camiseta lisa, blusa, jeans)
+- ❌ **NO caracterização folclórica** dos personagens (sem brincos étnicos, vestido típico, cocar) — diversidade pela pele/cabelo/traços faciais com aparência urbana contemporânea
+- ❌ **NO setas/conectores** ligando texto a elementos da imagem — integração só por overlap de cards e pictogramas na fronteira
+- ❌ **NO título massivo** — proporcional para A4 impresso (~36pt equivalente, NÃO "extreme bold dominant")
+- ❌ **NO texto truncado** — manter bullets verbatim do conteúdo enviado, reduzir fonte se preciso
+- ❌ **NO crowded layout** — espaçamento generoso entre boxes, cards nunca encostando
 
 ---
 
